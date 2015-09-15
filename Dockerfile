@@ -1,4 +1,5 @@
 FROM ubuntu:trusty
 RUN apt-get -y install wget
-RUN wget -q -O - http://get.pocketmine.net/ | bash -r
+RUN wget -q -O - http://get.pocketmine.net/ > install.sh
+RUN ./install.sh -r
 CMD start.sh
